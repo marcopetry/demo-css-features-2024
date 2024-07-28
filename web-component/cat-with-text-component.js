@@ -18,7 +18,7 @@ class MyComponent extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="container-text">
-            <img src="../assets/${this._img}.jpg" />
+            <img src="../assets/${this._img}.jpg" class="cat-component"/>
             
             <h3>What is Lorem Ipsum?</h3>
             <p>
