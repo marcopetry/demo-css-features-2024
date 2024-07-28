@@ -1,0 +1,85 @@
+html,
+body {
+  margin: 24px;
+  padding-top: 100vh;
+  padding: 0;
+}
+
+@keyframes sticky-parallax-header {
+  to {
+    background-position: 50% 0;
+    height: 10vh;
+    font-size: calc(4vw + 1em);
+    opacity: 0.7;
+    background-color: #3850a3;
+  }
+  from {
+    background-position: 50% 50%;
+    height: 90vh;
+    font-size: calc(4vw + 1em);
+    opacity: 1;
+  }
+}
+
+#menu-parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: sticky-parallax-header linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0vh 90vh;
+  background-image: url(../assets/gato-background.jpg);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  place-items: center;
+}
+
+.container-text {
+  margin-top: 48px;
+  display: grid;
+  gap: 12px;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0.6;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.cat-component {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  animation: reveal linear both;
+  animation-timeline: view();
+  width: 500px;
+}
+
+main {
+  margin-top: 1000px;
+}
+
+p,
+h3 {
+  max-width: 60%;
+  margin: auto;
+}
+
+h3 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+p {
+  grid-row: 2;
+  grid-column: 2;
+}
